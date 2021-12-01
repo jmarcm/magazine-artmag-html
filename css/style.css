@@ -22,22 +22,42 @@ body {
 #main-header {
     grid-row: 1;
     grid-column: 1;
-
+    
     display: grid;
     grid-template-rows: 3.5em 1fr;
-    padding: 0.3em 0 0.6em;
-    gap: 0.9em 0;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.3em 0.5em 0.6em;
+    gap: 1.2rem 0;
+
 
     background: #fff;
 }
 
 #logo {
-    height: 100%;
-    text-align: center;
+    justify-self: center;
+    align-self: stretch;
+    object-fit: cover;
+    grid-column: 1 / -1;
+    grid-row: 1;
+
+    /* height: 100%;
+    text-align: center; */
 }
 
 #logo img {
     height: 100%;
+}
+
+.social-icons {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+}
+
+.admin {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
 }
 
 .social-icons,
@@ -50,12 +70,14 @@ body {
 #main-header .social-icons,
 .admin {
     column-gap: 0.5em;
+    column-gap: 1.2em;
 }
 
 .social-icons a,
 .admin a {
     color: rgba(178, 49, 14, 0.86);
     color: #b2310e;
+    font-size: 1.2rem;
 }
 
 
@@ -73,15 +95,17 @@ body {
 
     .social-icons {
         grid-column: 1;
+        grid-row: 1;
     }
 
     #logo {
         grid-column: 3;
-        text-align: left;
+        grid-row: 1;
     }
 
     .admin {
         grid-column: -1;
+        grid-row: 1;
     }
 }
 
