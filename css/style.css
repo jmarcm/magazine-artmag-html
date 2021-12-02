@@ -270,10 +270,29 @@ body {
 }
 
 
-/* Main Footer
+/* Footer
 ------------------------------------------------------------------------------*/
 
 #main-footer {
+    /* padding: 0 1em; */
+}
+
+.partners {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 7rem);
+    justify-content: center;
+    justify-items: stretch;
+    align-items: stretch;
+    object-fit: cover;
+    padding: 1em;
+}
+
+.partners img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.author {
     grid-row: 3;
     grid-column: 1;
 
@@ -289,7 +308,11 @@ body {
 
 @media (min-width: 992px) {
 
-    #main-footer {
+    .partners {
+        grid-template-columns: repeat(auto-fit, 11rem);
+    }
+
+    .author {
         grid-template-columns: 1fr 1fr;
         column-gap: 1.5em;
         padding: 0.7em 0.5em;
